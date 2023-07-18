@@ -15,10 +15,8 @@ class Acces :
 
     def acces_site(self) -> "Vérifie si l'url est accessible" :
         """
-        :name: acces_site
-        :params: url string
-        :return: booléen
-        :desc: blabla
+        
+        
         """
     
         res = False
@@ -34,7 +32,7 @@ class Acces :
         """
         # HTML de la page
         html = requests.get(self.url, headers = {'User-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0'}).content
-        print(html)
+        #print(html)
         # Prépare la tambouille
         soup = BeautifulSoup(html, "html.parser")
         
@@ -42,7 +40,9 @@ class Acces :
         
         table_prix = soup.select("table[class='pricesTable realtime invertable'] tbody tr")
         
-        print(table_prix.getText())
+        td_once_fr = table_prix[0]
+        
+        print(td_once_fr.getText())
 
 
 # Liste des calibres et de leurs pages wikipédia
