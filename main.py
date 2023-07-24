@@ -25,7 +25,7 @@ class Acces :
         return res
     
     
-    def cours_or_once(self) -> "" :
+    def cours_or(self) -> "" :
         """
         
         
@@ -40,12 +40,15 @@ class Acces :
         
         table_prix = soup.select("table[class='pricesTable realtime invertable'] tbody tr")
         
-        td_once_fr = table_prix[0]
+        return table_prix
+
+    def format_table_prix(self, table) -> "" :
+        """
         
-        print(td_once_fr.getText())
+        """
+        
 
-
-# Liste des calibres et de leurs pages wikipédia
+# >F>onction principale
 
 if __name__ == "__main__" :
     
@@ -54,4 +57,6 @@ if __name__ == "__main__" :
     if acces.acces_site() :
         print("Le site est accessible")
         
-        acces.cours_or_once()
+        cours_once = acces.cours_or()[0]
+        
+        prin(acces.cours_or(cours_once))
