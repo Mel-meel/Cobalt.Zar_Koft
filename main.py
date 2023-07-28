@@ -59,4 +59,6 @@ if __name__ == "__main__" :
         
         cours_once = acces.cours_or()[0]
         
+        cours_gramme = acces.cours_or()[1]
+        
         prin(acces.cours_or(cours_once))
