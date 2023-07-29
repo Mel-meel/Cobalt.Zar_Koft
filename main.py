@@ -10,7 +10,7 @@ import Mysql
 class Acces :
 
     # Constructeur de la classe
-    def __init__(self, url):      
+    def __init__(self, url) :
         self.url = url
         self.soup = ""
 
@@ -63,3 +63,5 @@ if __name__ == "__main__" :
         cours_gramme = acces.cours_or()[1]
         
         prin(acces.cours_or(cours_once))
+        
+        mysql = Mysql(["localhost", "root", "root", "cobalt_zar_koft_test"])
