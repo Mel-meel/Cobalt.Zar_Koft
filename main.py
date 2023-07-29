@@ -2,8 +2,9 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from lxml import etree
-import sqlite3
+import mysql.connector
 import time
+import Mysql
 
 
 class Acces :
