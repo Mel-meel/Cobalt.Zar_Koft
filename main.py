@@ -2,7 +2,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from lxml import etree
-import mysql.connector
 import time
 import Mysql
 import configparser
@@ -54,7 +53,7 @@ class Acces :
 
 if __name__ == "__main__" :
 
-    container_conf = ConfigParser.ConfigParser()
+    container_conf = configparser.ConfigParser()
     container_conf.read('example.cfg')
     
     
@@ -67,6 +66,6 @@ if __name__ == "__main__" :
         
         cours_gramme = acces.cours_or()[1]
         
-        prin(acces.cours_or(cours_once))
+        print(cours_once)
         
         mysql = Mysql(["localhost", "root", "root", "cobalt_zar_koft_test"])
