@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from lxml import etree
 import time
-import Mysql
+from Mysql import Mysql
 import configparser
 
 

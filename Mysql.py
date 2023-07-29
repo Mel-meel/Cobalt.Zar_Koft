@@ -10,6 +10,6 @@ class Mysql :
                 user = configs[1],
                 password = configs[2]
             ) as connexion :
-            self.connexion = connexion
+                self.connexion = connexion
         except connector.Error as e :
             print(e)
