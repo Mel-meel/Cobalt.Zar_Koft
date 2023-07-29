@@ -5,6 +5,7 @@ from lxml import etree
 import mysql.connector
 import time
 import Mysql
+import configparser
 
 
 class Acces :
@@ -52,6 +53,10 @@ class Acces :
 # >F>onction principale
 
 if __name__ == "__main__" :
+
+    container_conf = ConfigParser.ConfigParser()
+    container_conf.read('example.cfg')
+    
     
     acces = Acces("https://www.gold.fr/cours-or-prix-de-l-or/")
     
